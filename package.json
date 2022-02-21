@@ -40,12 +40,17 @@
   ],
   "license": "MIT",
   "scripts": {
-    "lint": "prettier --write ."
+    "lint": "prettier --write .",
+    "testClient": "mocha './test/clientTest/**/*.js'",
+    "testEngine": "mocha './test/engineTest/**/*.js'",
+    "test": "npm run testClient & npm run testEngine"
   },
   "dependencies": {
     "node-fetch": "^2.1.2"
   },
   "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.1",
     "prettier": "^2.2.1"
   }
 }
